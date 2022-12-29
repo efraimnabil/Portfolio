@@ -474,6 +474,28 @@ a{
     .skills {
         flex-direction: column;
     }
+
+    .skill__img{
+        width: 60px;
+    }
+
+    .skill__img:hover{
+        transform: scale(1.1);
+    }
+
+    .my-skills{
+        width: 100%;
+    }
+
+    .my-competitive-programming{
+        width: 100%;
+    }
+
+    .my-portfolio{
+        width: 100%;
+    }
+
+    
 }
 
 
