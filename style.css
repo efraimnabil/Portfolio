@@ -502,9 +502,12 @@ a{
 .footer {
     background: #111;
     color: var(--clr-accent);
-    text-align: center;
-    padding: 2.5em 0;
     font-size: var(--fs-h3);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
     width: 150%;
 }
 
