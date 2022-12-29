@@ -284,3 +284,238 @@ nav { display: none; }
         z-index: 2;
     }
 }
+
+/* My work section */
+
+.my-work {
+    background-color: var(--clr-dark);
+    background-image: url(images/bg1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply;
+    color: var(--clr-light);
+    display: flex;
+    flex-direction: column; 
+}
+
+.section__title--work {
+    color: var(--clr-accent);
+    font-weight: var(--f)
+}
+
+.portfolio {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.flip-card {
+    width: 270px;
+    height: 170px;
+    perspective: 1000px;
+    margin: 10px;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-front {
+    background-color: #023047;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--clr-light);
+  }
+  
+  .flip-card-back {
+    background-color: #219ebc;
+    color: var(--clr-light);
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+a{
+    text-decoration: none;
+    color: var(--clr-light);
+}
+
+.source-btn{
+    background-color: rgb(0, 0, 0);
+    padding: auto;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 7px;
+}
+.source-btn:hover{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+@media (max-width: 800px) {
+    .portfolio {
+        flex-direction: column;
+    }
+}
+
+.btn-more{
+    background-color: var(--clr-accent);
+    color: var(--clr-light);
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 7px;
+    margin: 0 auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.btn-more:hover{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* Competitive Programming profile section */
+
+.my-competitive-programming {
+    color: var(--clr-dark);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.section__subtitle--competitive-programming {
+    color: var(--clr-accent);
+    font-weight: var(--fs-h2);
+    margin-bottom: 20px;
+}
+
+.competitive-programming{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.competitive-programming__item{
+    width: 80px;
+    margin: 10px;
+}
+
+.competitive-programming__item:hover{
+    transform: scale(1.2);
+}
+
+/* skills section */
+
+.my-skills{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 1000px;
+}
+
+.skills{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.skill__img{
+    width: 80px;
+    margin: 10px;
+}
+
+.skill__img:hover{
+    transform: scale(1.2);
+}
+
+@media (max-width: 800px) {
+    .skills {
+        flex-direction: column;
+    }
+}
+
+
+.footer {
+    background: #111;
+    color: var(--clr-accent);
+    text-align: center;
+    padding: 2.5em 0;
+    font-size: var(--fs-h3);
+    width: 150%;
+}
+
+.footer a { 
+    color: inherit;
+    text-decoration: none;
+}
+
+.footer__link {
+    font-weight: var(--fw-bold);
+}
+
+.footer__link:hover,
+.social-list__link:hover {
+    opacity: .7;
+}
+
+.footer__link:hover {
+    text-decoration: underline;
+}
+
+.social-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 2em 0 0;
+    padding: 0;
+}
+
+.social-list__item {
+    margin: 0 .5em;
+}
+
+.social-list__link {
+    padding: .5em;
+}
