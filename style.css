@@ -4,8 +4,6 @@
     box-sizing: border-box;
 }
 
-/* Custom Properties, update these for your own design */
-
 :root {
     --ff-primary: 'Source Sans Pro', sans-serif;
     --ff-secondary: 'Source Code Pro', monospace;
@@ -161,8 +159,6 @@ header {
     transform: scale(1.2);
 }
 
-/* General styles */
-
 body {
     background: var(--clr-light);
     color: var(--clr-dark);
@@ -183,11 +179,7 @@ img {
 
 strong { font-weight: var(--fw-bold) }
 
-/* Typography */
-
-h1,
-h2,
-h3 {
+h1, h2, h3 {
     line-height: 1;
     margin: 0;
 }
@@ -443,10 +435,13 @@ h3 { font-size: var(--fs-h3) }
     height: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-  }
+    border-radius: 40px;
+    box-shadow: inset 10px 10px 30px #002657,
+                5px 2px 20px #000000;
+}
   
   .flip-card-front {
-    background-color: #023047;
+    background-color: #00193b;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -455,28 +450,33 @@ h3 { font-size: var(--fs-h3) }
   }
   
   .flip-card-back {
-    background-color: #219ebc;
+    background-color: #002657;
     color: var(--clr-light);
     transform: rotateY(180deg);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 15px;
+    font-size: 12px;
+    font-family: var(--ff-secondary);
 }
+
 a{
     text-decoration: none;
     color: var(--clr-light);
+    font-family: var(--ff-secondary);
 }
 
 .source-btn{
-    background-color: rgb(0, 0, 0);
-    padding: auto;
+    background-color: #00132d;
+    padding: 5px;
     text-align: center;
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
+    border: none;
     border-radius: 7px;
+    box-shadow: var(--bs);
 }
 .source-btn:hover{
     padding-left: 10px;
@@ -486,6 +486,36 @@ a{
 @media (max-width: 800px) {
     .portfolio {
         flex-direction: column;
+    }
+
+    .flip-card {
+        width: 200px;
+        height: 230px;
+        margin: 10px;
+    }
+
+    .flip-card-front {
+        font-size: 20px;
+    }
+
+    .flip-card-back {
+        font-size: 12px;
+    }
+
+    .source-btn {
+        font-size: 15px;
+    }
+
+    .btn-more {
+        font-size: 20px;
+    }
+
+    .section__title--work {
+        font-size: 30px;
+    }
+
+    .section__subtitle--work {
+        font-size: 20px;
     }
 }
 
@@ -517,6 +547,7 @@ a{
     align-items: center;
     margin: 0 auto;
     max-width: 1000px;
+    padding: 30px;
 }
 
 .section__subtitle--competitive-programming {
@@ -544,6 +575,17 @@ a{
     transform: scale(1.2);
 }
 
+@media (max-width: 800px) {
+    .competitive-programming {
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .competitive-programming__item{
+        width: 60px;
+    }
+}
+
 /* skills section */
 
 .my-skills{
@@ -552,6 +594,7 @@ a{
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+    padding: 30px;
 }
 
 .skills{
@@ -573,6 +616,9 @@ a{
 }
 
 @media (max-width: 800px) {
+    .my-skills{
+        padding: 30px;
+    }
     .skills {
         flex-direction: column;
     }
@@ -596,11 +642,9 @@ a{
     .my-portfolio{
         width: 100%;
     }
-
-    
 }
 
-
+/* footer section */
 .footer {
     background: #111;
     color: var(--clr-accent);
@@ -611,6 +655,7 @@ a{
     justify-content: center;
     align-items: center;
     width: 100%;
+    padding: 30px;
 }
 
 .footer a { 
@@ -627,10 +672,6 @@ a{
     opacity: .7;
 }
 
-.footer__link:hover {
-    text-decoration: underline;
-}
-
 .social-list {
     list-style: none;
     display: flex;
@@ -645,4 +686,20 @@ a{
 
 .social-list__link {
     padding: .5em;
+}
+
+@media (max-width: 800px) {
+    .footer {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .footer__link {
+        font-size: 70%;
+    }
+
+    .social-list__item {
+        margin: 0 .2em;
+    }
+
 }
