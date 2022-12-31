@@ -35,9 +35,42 @@ header {
 }
 
 .logo {
-    max-width: 150px;
-    margin-top: -40px;
+    max-width: 130px;
 }
+
+.logo:hover{
+    -webkit-animation: pulsate-fwd 0.5s ease-in-out infinite both;
+    animation: pulsate-fwd 0.5s ease-in-out infinite both;
+}
+/* heart animation */
+@-webkit-keyframes pulsate-fwd {
+    0% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    50% {
+      -webkit-transform: scale(1.1);
+              transform: scale(1.1);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  @keyframes pulsate-fwd {
+    0% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    50% {
+      -webkit-transform: scale(1.1);
+              transform: scale(1.1);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
 
 .nav {
     position: fixed;
@@ -48,7 +81,6 @@ header {
     left: 0;
     right: 0;
     z-index: 100;
-    
     transform: translateX(100%);
     transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
 }
@@ -76,7 +108,7 @@ header {
 }
 
 .nav-toggle {
-    padding: .5em;
+    padding: 20px;
     background: transparent;
     border: 0;
     cursor: pointer;
@@ -84,6 +116,11 @@ header {
     right: 1em;
     top: 1em;
     z-index: 1000;
+}
+
+.nav-toggle:hover{
+    -webkit-animation: pulsate-fwd 0.5s ease-in-out infinite both;
+    animation: pulsate-fwd 0.5s ease-in-out infinite both;
 }
 
 .nav-open .nav {
@@ -218,7 +255,7 @@ h3 { font-size: var(--fs-h3) }
     display: inline-block;
 }
 
-/*  Intro section  */
+/*------------------------ Intro section ------------------------------*/
 
 .intro {
     position: relative;
@@ -344,10 +381,92 @@ h3 { font-size: var(--fs-h3) }
     max-width: 1000px;
     margin: 0 auto;
 }
+.btn-linkedin {
+    background-color: #0077b5;
+    color: var(--clr-light);
+    padding: 2px 2px;
+    border-radius: 5px;
+    margin-top: 2px;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: .8rem;
+    letter-spacing: 2px;
+    font-weight: var(--fw-bold);
+    transition: transform 200ms ease-in-out;
+}
+
+.btn-linkedin:hover {
+    transform: translateY(-2px);
+}
 
 .about-me__img {
     box-shadow: var(--bs);
 }
+
+.about-me__img:hover {
+    -webkit-animation: wobble-hor-bottom 0.8s both;
+    animation: wobble-hor-bottom 0.8s both;
+}
+
+@-webkit-keyframes wobble-hor-bottom {
+    0%,
+    100% {
+      -webkit-transform: translateX(0%);
+              transform: translateX(0%);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+    }
+    15% {
+      -webkit-transform: translateX(-30px) rotate(-6deg);
+              transform: translateX(-30px) rotate(-6deg);
+    }
+    30% {
+      -webkit-transform: translateX(15px) rotate(6deg);
+              transform: translateX(15px) rotate(6deg);
+    }
+    45% {
+      -webkit-transform: translateX(-15px) rotate(-3.6deg);
+              transform: translateX(-15px) rotate(-3.6deg);
+    }
+    60% {
+      -webkit-transform: translateX(9px) rotate(2.4deg);
+              transform: translateX(9px) rotate(2.4deg);
+    }
+    75% {
+      -webkit-transform: translateX(-6px) rotate(-1.2deg);
+              transform: translateX(-6px) rotate(-1.2deg);
+    }
+  }
+  @keyframes wobble-hor-bottom {
+    0%,
+    100% {
+      -webkit-transform: translateX(0%);
+              transform: translateX(0%);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+    }
+    15% {
+      -webkit-transform: translateX(-30px) rotate(-6deg);
+              transform: translateX(-30px) rotate(-6deg);
+    }
+    30% {
+      -webkit-transform: translateX(15px) rotate(6deg);
+              transform: translateX(15px) rotate(6deg);
+    }
+    45% {
+      -webkit-transform: translateX(-15px) rotate(-3.6deg);
+              transform: translateX(-15px) rotate(-3.6deg);
+    }
+    60% {
+      -webkit-transform: translateX(9px) rotate(2.4deg);
+              transform: translateX(9px) rotate(2.4deg);
+    }
+    75% {
+      -webkit-transform: translateX(-6px) rotate(-1.2deg);
+              transform: translateX(-6px) rotate(-1.2deg);
+    }
+  }
 
 @media (min-width: 600px) {
     .about-me {
@@ -533,9 +652,32 @@ a{
     margin-bottom: 1em;
 }
 .btn-more:hover{
-    padding-left: 10px;
-    padding-right: 10px;
+    -webkit-animation: blink-1 0.6s both;
+	animation: blink-1 0.6s both;
 }
+
+@-webkit-keyframes blink-1 {
+    0%,
+    50%,
+    100% {
+      opacity: 1;
+    }
+    25%,
+    75% {
+      opacity: 0;
+    }
+  }
+  @keyframes blink-1 {
+    0%,
+    50%,
+    100% {
+      opacity: 1;
+    }
+    25%,
+    75% {
+      opacity: 0;
+    }
+  }
 
 /* Competitive Programming profile section */
 
