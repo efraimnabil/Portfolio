@@ -712,8 +712,12 @@ a{
     width: 80px;
     margin: 10px;
 }
+.competitive-programming__ite{
+    width: 100px;
+    margin: 10px;
+}
 
-.competitive-programming__item:hover{
+.competitive-programming__item:hover, .competitive-programming__ite:hover{
     transform: scale(1.2);
 }
 
